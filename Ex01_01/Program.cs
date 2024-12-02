@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Ex01_01
 {
@@ -10,73 +11,85 @@ namespace Ex01_01
         }
         public static void Ex01()
         {
-            int firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat;
+            string firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat;
             int firstNumDecimalFormat, secondNumDecimalFormat, thirdNumDecimalFormat;
 
             Console.WriteLine("please enter 3 binary number with 8 digits each");
 
-            firstNumBinaryFormat = getBinaryNumberFromUser(out firstNumDecimalFormat);
-            secondNumBinaryFormat = getBinaryNumberFromUser(out secondNumDecimalFormat);
-            thirdNumBinaryFormat = getBinaryNumberFromUser(out thirdNumDecimalFormat);
+            firstNumBinaryFormat = getBinaryNumberFromUser();
+            secondNumBinaryFormat = getBinaryNumberFromUser();
+            thirdNumBinaryFormat = getBinaryNumberFromUser();
+
+            firstNumDecimalFormat = ParseBinaryToDecimal(firstNumBinaryFormat);
+            secondNumDecimalFormat = ParseBinaryToDecimal(secondNumBinaryFormat);
+            thirdNumDecimalFormat = ParseBinaryToDecimal(thirdNumBinaryFormat);
 
             Console.WriteLine($"{firstNumBinaryFormat} = {firstNumDecimalFormat}");
             Console.WriteLine($"{secondNumBinaryFormat} = {secondNumDecimalFormat}");
             Console.WriteLine($"{thirdNumBinaryFormat} = {thirdNumDecimalFormat}");
         }
 
-        private static int getBinaryNumberFromUser(out int o_NumDecimalFormat)
+        private static string getBinaryNumberFromUser()
         {
-            int binaryNumber = 0;
-            o_NumDecimalFormat = 0;
-            string inputNumber;
+            string inputNumber = "";
             bool isProperNum = false;
-            bool isNumber = false;
-            bool isBinary = false;
             while (!isProperNum)
             {
+                isProperNum = true;
                 inputNumber = Console.ReadLine();
-                if(inputNumber.Length != 8)
+                if (inputNumber.Length != 8)
                 {
                     Console.WriteLine("The number must be exactly 8 digits. Please try again.");
-                    continue;
+                    isProperNum = false;
                 }
-                isNumber = int.TryParse(inputNumber, out binaryNumber);
-                if (!isNumber)
+                for (int i = 0; i < inputNumber.Length; i++)
                 {
-                    Console.WriteLine("That's not a number.");
-                    continue;
+                    if (inputNumber[i] != '0' && inputNumber[i] != '1')
+                    {
+                        Console.WriteLine("The number must be binary number.");
+                        isProperNum = false;
+                        break;
+                    }
                 }
-                isBinary = TryParseBinaryToDecimal(binaryNumber,out o_NumDecimalFormat);
-
-                if (!isBinary)
-                {
-                    Console.WriteLine("The number must be binary number.");
-                    continue;
-                }
-                isProperNum = true;
             }
-            return binaryNumber;
+
+            return inputNumber;
+
         }
 
-        private static bool TryParseBinaryToDecimal(int i_BinaryNumber, out int io_DechimalNumber)
+        private static bool isBinaryNumber(int i_BinaryNumber)
         {
-            int powerOfTwo = 1;
-            io_DechimalNumber = 0;
-            int firstDigit;
-            while (i_BinaryNumber > 0)
+            int lastDigit;
+            while(i_BinaryNumber > 0)
             {
-                firstDigit = i_BinaryNumber % 10;
-                if (firstDigit > 1)
+                lastDigit = i_BinaryNumber % 10;
+                if( lastDigit > 1 )
                 {
-                    io_DechimalNumber = 0; //failed to parse
                     return false;
                 }
-                io_DechimalNumber += powerOfTwo * firstDigit;
                 i_BinaryNumber /= 10;
-                powerOfTwo *= 2;
             }
 
             return true;
+
+        }
+
+        private static int ParseBinaryToDecimal(string i_StringBinaryNumber)
+        {
+            int integerBinaryNumber;
+            integerBinaryNumber = int.Parse(i_StringBinaryNumber);
+            int powerOfTwo = 1;
+            int DechimalNumber = 0;
+            int firstDigit;
+            while (integerBinaryNumber > 0)
+            {
+                firstDigit = integerBinaryNumber % 10;
+                DechimalNumber += powerOfTwo * firstDigit;
+                integerBinaryNumber /= 10;
+                powerOfTwo *= 2;
+            }
+
+            return DechimalNumber;
         }
     }
 }
