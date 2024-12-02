@@ -5,6 +5,12 @@
         public static void Main(string[] args) 
         {
             System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+
         }
     }
 }
