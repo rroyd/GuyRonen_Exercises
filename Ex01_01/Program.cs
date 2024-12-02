@@ -5,9 +5,11 @@
         public static void Main(string[] args) 
         {
             System.Console.WriteLine("sahar");
-            System.Console.WriteLine("roy");
             System.Console.WriteLine("sahar");
-            System.Console.WriteLine("saharaa");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
+            System.Console.WriteLine("sahar");
         }
     }
 }
