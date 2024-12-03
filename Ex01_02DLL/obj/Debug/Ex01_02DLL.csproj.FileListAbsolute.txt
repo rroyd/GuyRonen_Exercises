@@ -1,0 +1,6 @@
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02DLL\bin\Debug\Ex01_02DLL.pdb
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02DLL\obj\Debug\Ex01_02DLL.csproj.AssemblyReference.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02DLL\obj\Debug\Ex01_02DLL.csproj.CoreCompileInputs.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02DLL\obj\Debug\Ex01_02DLL.dll
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02DLL\obj\Debug\Ex01_02DLL.pdb
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02DLL\obj\Debug\Ex01_02DLL.csproj.CopyComplete

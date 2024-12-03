@@ -28,32 +28,31 @@ namespace Ex01_01
             printAscendingNumbers(firstNumDecimalFormat, secondNumDecimalFormat, thirdNumDecimalFormat);
             printAvg(firstNumDecimalFormat, secondNumDecimalFormat, thirdNumDecimalFormat);
             printLargestSequenceBits(firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat);
-            printExchangesNumber(firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat);
-            printMostZeroesAndOnes(firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat);
-          
+            printNumberOfBitExchanges(firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat);
+            printMostZeroesNumber(firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat);
         }
 
-        private static void printMostZeroesAndOnes(string i_FirstNumBinary, string i_SecondNumBinary, string i_ThirdNumBinary)
+        private static void printMostZeroesNumber(string i_FirstNumBinary, string i_SecondNumBinary, string i_ThirdNumBinary)
         {
             int maxZeroesCount;
             int maxZeroesDecimalNumber;
-            string maxZeroesBinaryNumber;
+            string maxZeroesBinaryNumStr;
             int firstNumZeroesCount = countZerosInNum(i_FirstNumBinary);
             maxZeroesCount = firstNumZeroesCount;
-            maxZeroesBinaryNumber = i_FirstNumBinary;
+            maxZeroesBinaryNumStr = i_FirstNumBinary;
             int secondNumZeroesCount = countZerosInNum(i_SecondNumBinary);
             if(secondNumZeroesCount > maxZeroesCount)
             {
                 maxZeroesCount = secondNumZeroesCount;
-                maxZeroesBinaryNumber = i_SecondNumBinary;
+                maxZeroesBinaryNumStr = i_SecondNumBinary;
             }
             int thirdNumZeroesCount = countZerosInNum(i_ThirdNumBinary);
             if (thirdNumZeroesCount > maxZeroesCount)
             {
                 maxZeroesCount = thirdNumZeroesCount;
-                maxZeroesBinaryNumber = i_ThirdNumBinary;
+                maxZeroesBinaryNumStr = i_ThirdNumBinary;
              }
-            maxZeroesDecimalNumber = parseBinaryToDecimalNumber(maxZeroesBinaryNumber);
+            maxZeroesDecimalNumber = parseBinaryToDecimalNumber(maxZeroesBinaryNumStr);
             Console.WriteLine($"{maxZeroesDecimalNumber}: {maxZeroesCount}");
         }
 
@@ -71,46 +70,46 @@ namespace Ex01_01
             return count;
         }
 
-        private static void printExchangesNumber(string i_FirstNumBinary, string i_SecondNumBinary, string i_ThirdNumBinary)
+        private static void printNumberOfBitExchanges(string i_FirstNumBinary, string i_SecondNumBinary, string i_ThirdNumBinary)
         {
-            Console.WriteLine($"({i_FirstNumBinary}): {exchangesNumber(i_FirstNumBinary)}");
-            Console.WriteLine($"({i_SecondNumBinary}): {exchangesNumber(i_SecondNumBinary)}");
-            Console.WriteLine($"({i_ThirdNumBinary}): {exchangesNumber(i_ThirdNumBinary)}");
+            Console.WriteLine($"({i_FirstNumBinary}): {numberOfBitExchanges(i_FirstNumBinary)}");
+            Console.WriteLine($"({i_SecondNumBinary}): {numberOfBitExchanges(i_SecondNumBinary)}");
+            Console.WriteLine($"({i_ThirdNumBinary}): {numberOfBitExchanges(i_ThirdNumBinary)}");
         }
 
-        private static int exchangesNumber(string i_BinaryNum)
+        private static int numberOfBitExchanges(string i_BinaryNum)
         {
-            int exchanges = 0;
+            int numOfExchanges = 0;
             for (int i = 1; i < i_BinaryNum.Length; i++)
             {
                 if (i_BinaryNum[i - 1] != i_BinaryNum[i])
                 {
-                    exchanges++;
+                    numOfExchanges++;
                 }
             }
-            return exchanges;
+            return numOfExchanges;
         }
 
         private static void printLargestSequenceBits(string i_FirstNumBinary, string i_SecondNumBinary, string i_ThirdNumBinary)
         {
             int mostSqeuenceBits;
             int tempSqeuenceBits;
-            string mostSqeuenceBitsNumber;
+            string mostSqeuenceBitsNumStr;
             mostSqeuenceBits = findSequenceBits(i_FirstNumBinary);
-            mostSqeuenceBitsNumber = i_FirstNumBinary;
+            mostSqeuenceBitsNumStr = i_FirstNumBinary;
             tempSqeuenceBits = findSequenceBits(i_SecondNumBinary);
             if(tempSqeuenceBits > mostSqeuenceBits)
             {
                 mostSqeuenceBits = tempSqeuenceBits;
-                mostSqeuenceBitsNumber = i_SecondNumBinary;
+                mostSqeuenceBitsNumStr = i_SecondNumBinary;
             }
             tempSqeuenceBits = findSequenceBits(i_ThirdNumBinary);
             if (tempSqeuenceBits > mostSqeuenceBits)
             {
                 mostSqeuenceBits = tempSqeuenceBits;
-                mostSqeuenceBitsNumber = i_ThirdNumBinary;
+                mostSqeuenceBitsNumStr = i_ThirdNumBinary;
             }
-            Console.WriteLine($"{mostSqeuenceBitsNumber}:{mostSqeuenceBits}");
+            Console.WriteLine($"{mostSqeuenceBitsNumStr}:{mostSqeuenceBits}");
         }
 
         private static int findSequenceBits(string i_BinaryNum)
@@ -125,17 +124,12 @@ namespace Ex01_01
                 }
                 else
                 {
-                    if(sequence > maxSequence)
-                    {
-                        maxSequence = sequence;
-                    }
+                    maxSequence = Math.Max(maxSequence, sequence);
                     sequence = 1;
                 }
             }
-            if (sequence > maxSequence)
-            {
-                maxSequence = sequence;
-            }
+            maxSequence = Math.Max(maxSequence, sequence);
+
             return maxSequence;
         }
 
@@ -147,7 +141,6 @@ namespace Ex01_01
 
         private static void printAscendingNumbers(int firstNum, int secondNum, int thirdNum)
         {
-
             int min = Math.Min(firstNum, Math.Min(secondNum, thirdNum));
             int max = Math.Max(firstNum, Math.Max(secondNum, thirdNum));
             int mid = (firstNum + secondNum + thirdNum - min - max);
@@ -167,6 +160,7 @@ namespace Ex01_01
                 {
                     Console.WriteLine("The number must be exactly 8 digits. Please try again.");
                     isProperNum = false;
+                    continue;
                 }
                 for (int i = 0; i < inputNumber.Length; i++)
                 {
@@ -183,39 +177,22 @@ namespace Ex01_01
 
         }
 
-        private static bool isBinaryNumber(int i_BinaryNumber)
-        {
-            int lastDigit;
-            while(i_BinaryNumber > 0)
-            {
-                lastDigit = i_BinaryNumber % 10;
-                if( lastDigit > 1 )
-                {
-                    return false;
-                }
-                i_BinaryNumber /= 10;
-            }
-
-            return true;
-
-        }
-
         private static int parseBinaryToDecimalNumber(string i_StringBinaryNumber)
         {
             int integerBinaryNumber;
             int powerOfTwo = 1;
-            int DechimalNumber = 0;
-            int firstDigit;
+            int decimalNumber = 0;
+            int currentDigit; 
             integerBinaryNumber = int.Parse(i_StringBinaryNumber);
             while (integerBinaryNumber > 0)
             {
-                firstDigit = integerBinaryNumber % 10;
-                DechimalNumber += powerOfTwo * firstDigit;
+                currentDigit = integerBinaryNumber % 10;
+                decimalNumber += powerOfTwo * currentDigit;
                 integerBinaryNumber /= 10;
-                powerOfTwo *= 2;
+                powerOfTwo = (int)Math.Pow(powerOfTwo, 2);
             }
 
-            return DechimalNumber;
+            return decimalNumber;
         }
     }
 }

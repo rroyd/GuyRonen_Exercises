@@ -1,2 +1,14 @@
 C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_03\obj\Debug\Ex01_03.csproj.AssemblyReference.cache
 C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_03\obj\Debug\Ex01_03.csproj.CoreCompileInputs.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\bin\Debug\Ex01_03.exe.config
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\bin\Debug\Ex01_03.exe
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\bin\Debug\Ex01_03.pdb
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\bin\Debug\Ex01_02.exe
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\bin\Debug\Ex01_02.pdb
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\bin\Debug\Ex01_02.exe.config
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\obj\Debug\Ex01_03.csproj.AssemblyReference.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\obj\Debug\Ex01_03.csproj.SuggestedBindingRedirects.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\obj\Debug\Ex01_03.csproj.CoreCompileInputs.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\obj\Debug\Ex01_03.csproj.CopyComplete
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\obj\Debug\Ex01_03.exe
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_03\obj\Debug\Ex01_03.pdb
