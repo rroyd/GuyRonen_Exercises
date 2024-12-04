@@ -19,7 +19,7 @@ namespace Ex01_04
             isEnglish,
             isNumber
         }
-        
+
         private static string getInputFromUser(out eStrType io_TypeOfString)
         {
             bool v_ValidateInput = true;
@@ -32,17 +32,19 @@ namespace Ex01_04
                 {
                     continue;
                 }
-                for (int i = 0; i < userInput.Length; i++) 
+                for (int i = 0; i < userInput.Length; i++)
                 {
-                    if(io_TypeOfString == eStrType.isEnglishAndNum) {
-                        if (isEnglishLetter(userInput[1]))
+                    if (io_TypeOfString == eStrType.isEnglishAndNum)
+                    {
+                        if (isEnglishLetter(userInput[i]))
                         {
-                            io_TypeOfString = 
+                            io_TypeOfString
                         }
 
+                    }
                 }
-            }
 
+            }
         }
 
         private static bool isPolindrome(string i_Str) {
