@@ -19,8 +19,8 @@ namespace Ex01_04
         
         }
 
-        private static bool isPolindrome(string i_Str) { 
-
+        private static bool isPolindrome(string i_Str) {
+            Console.WriteLine("טל מוסרי");
         }
 
         private static bool checkIfDividesByFourIfNumber(int i_Num, out bool o_DividesByFour) {
