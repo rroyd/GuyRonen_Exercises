@@ -11,23 +11,28 @@ namespace Ex01_04
 
         public static void Ex4()
         {
-            Console.WriteLine("שימי תבורי");
+            
+        }
+
+        private static string getInputFromUser()
+        {
+            Console.WriteLine("טל מוסרי");
         }
 
         private static bool isPolindrome(string i_Str) { 
 
         }
 
-        private static bool checkIfDividesByFour(int i_Num) {
+        private static bool checkIfDividesByFourIfNumber(int i_Num, out bool o_DividesByFour) {
 
         }
 
-        private static bool numberOfLowercaseLetters(string i_Str, out int o_NumOfLowercaseLetters)
+        private static bool numberOfLowercaseLettersIfEnglish(string i_Str, out int o_NumOfLowercaseLetters)
         {
 
         }
 
-        private static bool checkIfAlphabetDescending(string i_Str, out bool o_IsAlphabetDescending) {
+        private static bool checkIfAlphabetDescendingIfEnglish(string i_Str, out bool o_IsAlphabetDescending) {
 
         }
 
