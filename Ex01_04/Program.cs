@@ -16,7 +16,7 @@ namespace Ex01_04
 
         private static string getInputFromUser()
         {
-            Console.WriteLine("טל מוסרי");
+        
         }
 
         private static bool isPolindrome(string i_Str) { 
