@@ -7,13 +7,13 @@ namespace Ex01_04
         public static void Main()
         {
             Ex4();
-            Console.WriteLine("sahar");
+            Console.WriteLine("gayyy");
         }
 
         public static void Ex4()
         {
-            Console.WriteLine("sahar"); 
-            Console.WriteLine("sahar");
+            Console.WriteLine("gayyy"); 
+            Console.WriteLine("gayyy");
         }
 
         private static string getInputFromUser()
