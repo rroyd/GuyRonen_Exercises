@@ -13,13 +13,34 @@ namespace Ex01_04
         {
             getInputFromUser();
         }
-
-        private static string getInputFromUser()
+        enum eStrType
+        {
+            isEnglishAndNum = 0,
+            isEnglish,
+            isNumber
+        }
+        
+        private static string getInputFromUser(out eStrType io_TypeOfString)
         {
             bool v_ValidateInput = true;
+
+            string userInput;
             while (!v_ValidateInput)
             {
+                userInput = Console.ReadLine();
+                if (userInput.Length != 10)
+                {
+                    continue;
+                }
+                for (int i = 0; i < userInput.Length; i++) 
+                {
+                    if(io_TypeOfString == eStrType.isEnglishAndNum) {
+                        if (isEnglishLetter(userInput[1]))
+                        {
+                            io_TypeOfString = 
+                        }
 
+                }
             }
 
         }
