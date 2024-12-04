@@ -7,6 +7,7 @@ namespace Ex01_04
         public static void Main()
         {
             Ex4();
+            Console.WriteLine("sahar");
         }
 
         public static void Ex4()
