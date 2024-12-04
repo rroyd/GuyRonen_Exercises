@@ -10,6 +10,7 @@ namespace Ex01_01
         {
             Ex01();
             Console.WriteLine("sahar");
+            Console.WriteLine("Roy");
         }
         public static void Ex01()
         {
