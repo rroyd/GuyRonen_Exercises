@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.ExceptionServices;
 
 namespace Ex01_04
 {
@@ -22,28 +23,64 @@ namespace Ex01_04
 
         private static string getInputFromUser(out eStrType io_TypeOfString)
         {
-            bool v_ValidateInput = true;
-
+            bool validateInput = false;
             string userInput;
-            while (!v_ValidateInput)
+            while (!validateInput)
             {
+
                 userInput = Console.ReadLine();
-                if (userInput.Length != 10)
+                char firstInputChar = userInput[1];
+                if (userInput.Length != 10 || (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar)))
                 {
+                    validateInput = false;
                     continue;
+                }
+                if (char.IsDigit(userInput[1]))
+                {
+                    io_TypeOfString = eStrType.isNumber;
+                }
+                else
+                {
+                    io_TypeOfString = eStrType.isEnglish;
                 }
                 for (int i = 0; i < userInput.Length; i++)
                 {
+                    if (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar))
+                    {
+                        validateInput = false;
+                        break;
+                    }
                     if (io_TypeOfString == eStrType.isEnglishAndNum)
                     {
-                        if (isEnglishLetter(userInput[i]))
+                        continue;
+                    }
+                    if (io_TypeOfString == eStrType.isNumber)
+                    {
+                        if (char.IsDigit(userInput[i]))
                         {
-                            io_TypeOfString
+                            io_TypeOfString = eStrType.isNumber;
+                            continue;
+                        }
+                        else
+                        {
+                            io_TypeOfString = eStrType.isEnglishAndNum;
                         }
 
                     }
-                }
+                    if (io_TypeOfString == eStrType.isEnglish)
+                    {
+                        if (isEnglishLetter(userInput[i]))
+                        {
+                            io_TypeOfString = eStrType.isEnglish;
+                            continue;
+                        }
+                        else
+                        {
+                            io_TypeOfString = eStrType.isEnglishAndNum;
+                        }
+                    }
 
+                }
             }
         }
 
