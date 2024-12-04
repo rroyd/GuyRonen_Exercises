@@ -108,7 +108,7 @@ namespace Ex01_04
                     return false;
                 }
 
-                if(currentLetter >= 'a' && currentLetter <= 'z' && previousLetter >= 'a' && previousLetter <= 'z')
+                if(isLowerCase(currentLetter) && isLowerCase(previousLetter))
                 {
                     if(previousLetter > currentLetter)
                     {
@@ -116,7 +116,7 @@ namespace Ex01_04
                     }
                 }
 
-                if (currentLetter >= 'A' && currentLetter <= 'Z' && previousLetter >= 'A' && previousLetter <= 'Z')
+                if (isUpperCase(currentLetter) && isUpperCase(previousLetter))
                 {
                     if (previousLetter > currentLetter)
                     {
@@ -130,5 +130,14 @@ namespace Ex01_04
             return true;
         }
 
+        private static bool isLowerCase(char i_Letter)
+        {
+            return (i_Letter >= 'a' && i_Letter <= 'z');
+        }
+
+        private static bool isUpperCase(char i_Letter)
+        {
+            return (i_Letter >= 'A' && i_Letter <= 'Z');
+        }
     }
 }
