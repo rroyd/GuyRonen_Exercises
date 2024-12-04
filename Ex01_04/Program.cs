@@ -11,10 +11,17 @@ namespace Ex01_04
 
         public static void Ex4()
         {
+            getInputFromUser();
         }
 
         private static string getInputFromUser()
         {
+            bool v_ValidateInput = true;
+            while (!v_ValidateInput)
+            {
+
+            }
+
         }
 
         private static bool isPolindrome(string i_Str) {
