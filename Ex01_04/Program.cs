@@ -1,4 +1,6 @@
-﻿namespace Ex01_04
+﻿using System;
+
+namespace Ex01_04
 {
     class Program
     {
@@ -9,7 +11,7 @@
 
         public static void Ex4()
         {
-
+            Console.WriteLine("שימי תבורי");
         }
 
         private static bool isPolindrome(string i_Str) { 
