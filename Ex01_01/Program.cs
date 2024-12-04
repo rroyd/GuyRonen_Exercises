@@ -148,6 +148,9 @@ namespace Ex01_01
         }
 
 
+
+
+
         private static string getBinaryNumberFromUser()
         {
             string inputNumber = "";
