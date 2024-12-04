@@ -12,7 +12,11 @@ namespace Ex01_04
 
         public static void Ex4()
         {
-            getInputFromUser();
+            eStrType typeOfStr;
+            string userInput;
+            userInput = getInputFromUser(out typeOfStr);
+            isPolindrome(userInput);
+
         }
         enum eStrType
         {
@@ -21,19 +25,16 @@ namespace Ex01_04
             isNumber
         }
         
-        private static bool isEnglishLetter(char letter)
-        {
-            return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
-        }
-
 
         private static string getInputFromUser(out eStrType io_TypeOfString)
         {
+            io_TypeOfString = eStrType.isEnglishAndNum;
+            
             bool validateInput = false;
-            string userInput;
+            string userInput="";
             while (!validateInput)
             {
-
+                Console.WriteLine("please write validate string");
                 userInput = Console.ReadLine();
                 char firstInputChar = userInput[1];
                 if (userInput.Length != 10 || (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar)))
@@ -41,7 +42,6 @@ namespace Ex01_04
                     validateInput = false;
                     continue;
                 }
-                for (int i = 0; i < userInput.Length; i++)
                 if (char.IsDigit(userInput[1]))
                 {
                     io_TypeOfString = eStrType.isNumber;
@@ -50,11 +50,11 @@ namespace Ex01_04
                 {
                     io_TypeOfString = eStrType.isEnglish;
                 }
+                validateInput = true;
                 for (int i = 0; i < userInput.Length; i++)
                 {
-                    if (io_TypeOfString == eStrType.isEnglishAndNum) {
-                        if (isEnglishLetter(userInput[1]))
-                    if (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar))
+
+                    if (!char.IsDigit(userInput[i]) && !isEnglishLetter(userInput[i]))
                     {
                         validateInput = false;
                         break;
@@ -67,19 +67,14 @@ namespace Ex01_04
                     {
                         if (char.IsDigit(userInput[i]))
                         {
-                            io_TypeOfString = eStrType.isNumber;
                             continue;
                         }
                         else
                         {
-                            io_TypeOfString =
                             io_TypeOfString = eStrType.isEnglishAndNum;
+                            continue;
                         }
 
-                    }
-                }
-            }
-        }
                     }
                     if (io_TypeOfString == eStrType.isEnglish)
                     {
@@ -91,13 +86,18 @@ namespace Ex01_04
                         else
                         {
                             io_TypeOfString = eStrType.isEnglishAndNum;
+                            continue;
                         }
                     }
-
                 }
             }
-        }
 
+            return userInput;
+        }
+        private static bool isEnglishLetter(char letter)
+        {
+            return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
+        }
         private static bool isPolindrome(string i_Input) {
             int i_LeftIterator = 0, i_RightIterator = 9;
 
