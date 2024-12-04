@@ -9,6 +9,7 @@ namespace Ex01_01
         public static void Main() 
         {
             Ex01();
+            Console.WriteLine("Roy");
         }
         public static void Ex01()
         {
