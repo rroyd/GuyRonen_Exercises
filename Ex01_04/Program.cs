@@ -47,12 +47,12 @@ namespace Ex01_04
             }
         }
 
-        private static bool isPolindrome(string i_Str) {
-            int i_LeftIterator = 0, i_RightIterator = i_Str.Length - 1;
+        private static bool isPolindrome(string i_Input) {
+            int i_LeftIterator = 0, i_RightIterator = 9;
 
             while (i_LeftIterator < i_RightIterator)
             {
-                if (i_Str[i_LeftIterator] != i_Str[i_RightIterator])
+                if (i_Input[i_LeftIterator] != i_Input[i_RightIterator])
                 {
                     return false;
                 }
@@ -61,16 +61,39 @@ namespace Ex01_04
             return true;
         }
 
-        private static bool checkIfDividesByFourIfNumber(int i_Num, out bool o_DividesByFour) {
+        private static bool checkIfDividesByFourIfNumber(string i_Input, out bool o_DividesByFour) {
+            int inputNum;
+            bool isNumber = int.TryParse(i_Input, out inputNum);
 
+            if(!isNumber)
+            {
+                o_DividesByFour = false;
+                return false;
+            }
+
+            o_DividesByFour = true;
+            return inputNum % 4 == 0;
         }
 
-        private static bool numberOfLowercaseLettersIfEnglish(string i_Str, out int o_NumOfLowercaseLetters)
+        private static bool numberOfLowercaseLettersIfEnglish(string i_Input, out int o_NumOfLowercaseLetters)
         {
+            o_NumOfLowercaseLetters = 0;
 
+            for (int i = 0;i<10;i++)
+            {
+                char currentLetter = i_Input[i];
+                if (char.IsDigit(currentLetter))
+                {
+                    return false;
+                }
+                if (currentLetter >= 'a' && currentLetter <= 'z')
+                    o_NumOfLowercaseLetters++;
+            }
+
+            return true;
         }
 
-        private static bool checkIfAlphabetDescendingIfEnglish(string i_Str, out bool o_IsAlphabetDescending) {
+        private static bool checkIfAlphabetDescendingIfEnglish(string i_Input, out bool o_IsAlphabetDescending) {
 
         }
 
