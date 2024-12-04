@@ -20,6 +20,12 @@ namespace Ex01_04
             isEnglish,
             isNumber
         }
+        
+        private static bool isEnglishLetter(char letter)
+        {
+            return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
+        }
+
 
         private static string getInputFromUser(out eStrType io_TypeOfString)
         {
@@ -35,6 +41,7 @@ namespace Ex01_04
                     validateInput = false;
                     continue;
                 }
+                for (int i = 0; i < userInput.Length; i++)
                 if (char.IsDigit(userInput[1]))
                 {
                     io_TypeOfString = eStrType.isNumber;
@@ -45,6 +52,8 @@ namespace Ex01_04
                 }
                 for (int i = 0; i < userInput.Length; i++)
                 {
+                    if (io_TypeOfString == eStrType.isEnglishAndNum) {
+                        if (isEnglishLetter(userInput[1]))
                     if (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar))
                     {
                         validateInput = false;
@@ -63,9 +72,14 @@ namespace Ex01_04
                         }
                         else
                         {
+                            io_TypeOfString =
                             io_TypeOfString = eStrType.isEnglishAndNum;
                         }
 
+                    }
+                }
+            }
+        }
                     }
                     if (io_TypeOfString == eStrType.isEnglish)
                     {
@@ -131,9 +145,38 @@ namespace Ex01_04
         }
 
         private static bool checkIfAlphabetDescendingIfEnglish(string i_Input, out bool o_IsAlphabetDescending) {
+            o_IsAlphabetDescending = true;  
 
+            for (int i = 1; i < 10; i++)
+            {
+                char currentLetter = i_Input[i], previousLetter = i_Input[i-1];
+
+                if (char.IsDigit(currentLetter) || char.IsDigit(previousLetter)) {
+                    o_IsAlphabetDescending = false;
+                    return false;
+                }
+
+                if(currentLetter >= 'a' && currentLetter <= 'z' && previousLetter >= 'a' && previousLetter <= 'z')
+                {
+                    if(previousLetter > currentLetter)
+                    {
+                        continue;
+                    }
+                }
+
+                if (currentLetter >= 'A' && currentLetter <= 'Z' && previousLetter >= 'A' && previousLetter <= 'Z')
+                {
+                    if (previousLetter > currentLetter)
+                    {
+                        continue;
+                    }
+                }
+
+                o_IsAlphabetDescending = false;
+            }
+
+            return true;
         }
-
 
     }
 }
