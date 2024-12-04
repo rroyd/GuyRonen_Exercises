@@ -54,49 +54,43 @@ namespace Ex01_04
                 {
                     if (io_TypeOfString == eStrType.isEnglishAndNum) {
                         if (isEnglishLetter(userInput[1]))
-                    if (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar))
-                    {
-                        validateInput = false;
-                        break;
-                    }
-                    if (io_TypeOfString == eStrType.isEnglishAndNum)
-                    {
-                        continue;
-                    }
-                    if (io_TypeOfString == eStrType.isNumber)
-                    {
-                        if (char.IsDigit(userInput[i]))
+                            if (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar))
+                            {
+                                validateInput = false;
+                                break;
+                            }
+                        if (io_TypeOfString == eStrType.isEnglishAndNum)
                         {
-                            io_TypeOfString = eStrType.isNumber;
                             continue;
                         }
-                        else
+                        if (io_TypeOfString == eStrType.isNumber)
                         {
-                            io_TypeOfString =
-                            io_TypeOfString = eStrType.isEnglishAndNum;
+                            if (char.IsDigit(userInput[i]))
+                            {
+                                io_TypeOfString = eStrType.isNumber;
+                                continue;
+                            }
+                            else
+                            {
+                                io_TypeOfString =
+                                io_TypeOfString = eStrType.isEnglishAndNum;
+                            }
+                        }
+                        if (io_TypeOfString == eStrType.isEnglish)
+                        {
+                            if (isEnglishLetter(userInput[i]))
+                            {
+                                io_TypeOfString = eStrType.isEnglish;
+                                continue;
+                            }
+                            else
+                            {
+                                io_TypeOfString = eStrType.isEnglishAndNum;
+                            }
                         }
 
                     }
                 }
-            }
-        }
-                    }
-                    if (io_TypeOfString == eStrType.isEnglish)
-                    {
-                        if (isEnglishLetter(userInput[i]))
-                        {
-                            io_TypeOfString = eStrType.isEnglish;
-                            continue;
-                        }
-                        else
-                        {
-                            io_TypeOfString = eStrType.isEnglishAndNum;
-                        }
-                    }
-
-                }
-            }
-        }
 
         private static bool isPolindrome(string i_Input) {
             int i_LeftIterator = 0, i_RightIterator = 9;
