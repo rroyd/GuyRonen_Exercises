@@ -5,7 +5,9 @@ namespace Ex01_05
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("sahar");
+            int x;
+            Console.WriteLine(int.TryParse("5dssddsd6", out x));
+            Console.WriteLine(x);
         }
     }
 }
