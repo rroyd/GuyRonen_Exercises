@@ -15,7 +15,10 @@ namespace Ex01_04
             eStrType typeOfStr;
             string userInput;
             userInput = getInputFromUser(out typeOfStr);
-            isPolindrome(userInput);
+            Console.WriteLine(isPolindrome(userInput));
+
+            bool dividesByFour;
+            Console.WriteLine(checkIfDividesByFourIfNumber(userInput, out dividesByFour) + " " + dividesByFour);
 
         }
         enum eStrType
@@ -36,13 +39,13 @@ namespace Ex01_04
             {
                 Console.WriteLine("please write validate string");
                 userInput = Console.ReadLine();
-                char firstInputChar = userInput[1];
+                char firstInputChar = userInput[0];
                 if (userInput.Length != 10 || (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar)))
                 {
                     validateInput = false;
                     continue;
                 }
-                if (char.IsDigit(userInput[1]))
+                if (char.IsDigit(firstInputChar))
                 {
                     io_TypeOfString = eStrType.isNumber;
                 }
@@ -51,9 +54,8 @@ namespace Ex01_04
                     io_TypeOfString = eStrType.isEnglish;
                 }
                 validateInput = true;
-                for (int i = 0; i < userInput.Length; i++)
+                for (int i = 1; i < userInput.Length; i++)
                 {
-
                     if (!char.IsDigit(userInput[i]) && !isEnglishLetter(userInput[i]))
                     {
                         validateInput = false;
@@ -103,7 +105,7 @@ namespace Ex01_04
 
             while (i_LeftIterator < i_RightIterator)
             {
-                if (i_Input[i_LeftIterator] != i_Input[i_RightIterator])
+                if (i_Input[i_LeftIterator++] != i_Input[i_RightIterator--])
                 {
                     return false;
                 }

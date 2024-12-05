@@ -5,3 +5,11 @@ C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_04\bin\Debug\Ex01_04.exe
 C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_04\bin\Debug\Ex01_04.pdb
 C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_04\obj\Debug\Ex01_04.exe
 C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_04\obj\Debug\Ex01_04.pdb
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\bin\Debug\Ex01_04.exe.config
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\bin\Debug\Ex01_04.exe
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\bin\Debug\Ex01_04.pdb
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\obj\Debug\Ex01_04.csproj.AssemblyReference.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\obj\Debug\Ex01_04.csproj.SuggestedBindingRedirects.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\obj\Debug\Ex01_04.csproj.CoreCompileInputs.cache
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\obj\Debug\Ex01_04.exe
+C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_04\obj\Debug\Ex01_04.pdb
