@@ -176,8 +176,8 @@ namespace Ex01_04
             else Console.WriteLine("1. Is the string polindrome: No");
 
             if (i_Type == eStrType.IsNumber)
-                {
-                    if (checkIfDividesByFourIfNumber(i_UserInput))
+            {
+                if (checkIfDividesByFourIfNumber(i_UserInput))
                     {
                         Console.WriteLine("2. Is divided by 4 without remainder: Yes");
                     } else Console.WriteLine($"2. Is divided by 4 without remainder: No");
