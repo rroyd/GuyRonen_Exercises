@@ -5,6 +5,7 @@ namespace Ex01_04
 {
     class Program
     {
+     
         public static void Main()
         {
             Ex4();
@@ -12,87 +13,73 @@ namespace Ex01_04
 
         public static void Ex4()
         {
-            eStrType typeOfStr;
+            eStrType typeOfStr = eStrType.None;
             string userInput;
             userInput = getInputFromUser(out typeOfStr);
+            Console.WriteLine(userInput);
+            Console.WriteLine(typeOfStr);
             isPolindrome(userInput);
 
         }
+        [Flags]
         enum eStrType
         {
-            isEnglishAndNum = 0,
-            isEnglish,
-            isNumber
+            None = 0,
+            IsEnglish = 1,
+            IsNumber = 2,
+            IsEnglishAndNum = IsNumber | IsEnglish
         }
         
 
         private static string getInputFromUser(out eStrType io_TypeOfString)
         {
-            io_TypeOfString = eStrType.isEnglishAndNum;
-            
+            io_TypeOfString = eStrType.None;
+            const int requiredInputLength = 10;
             bool validateInput = false;
             string userInput="";
             while (!validateInput)
             {
-                Console.WriteLine("please write validate string");
+                io_TypeOfString = eStrType.None;
+                validateInput = true;
+                Console.WriteLine("please write valid string of 10 chars with english and numbers");
                 userInput = Console.ReadLine();
-                char firstInputChar = userInput[1];
-                if (userInput.Length != 10 || (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar)))
+                if (userInput.Length != requiredInputLength)
                 {
                     validateInput = false;
                     continue;
                 }
-                if (char.IsDigit(userInput[1]))
-                {
-                    io_TypeOfString = eStrType.isNumber;
-                }
-                else
-                {
-                    io_TypeOfString = eStrType.isEnglish;
-                }
-                validateInput = true;
                 for (int i = 0; i < userInput.Length; i++)
                 {
-
-                    if (!char.IsDigit(userInput[i]) && !isEnglishLetter(userInput[i]))
+                    validateInput = validateAndDetermineInputState(userInput[i], ref io_TypeOfString);
+                    if (!validateInput)
                     {
-                        validateInput = false;
+                        Console.WriteLine("please enter valid string!");
                         break;
-                    }
-                    if (io_TypeOfString == eStrType.isEnglishAndNum)
-                    {
-                        continue;
-                    }
-                    if (io_TypeOfString == eStrType.isNumber)
-                    {
-                        if (char.IsDigit(userInput[i]))
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            io_TypeOfString = eStrType.isEnglishAndNum;
-                            continue;
-                        }
-
-                    }
-                    if (io_TypeOfString == eStrType.isEnglish)
-                    {
-                        if (isEnglishLetter(userInput[i]))
-                        {
-                            io_TypeOfString = eStrType.isEnglish;
-                            continue;
-                        }
-                        else
-                        {
-                            io_TypeOfString = eStrType.isEnglishAndNum;
-                            continue;
-                        }
                     }
                 }
             }
 
             return userInput;
+        }
+        private static bool validateAndDetermineInputState(char i_InputChar, ref eStrType io_CourrentInputState)
+        {
+            bool isValidateChar = true;
+            bool isEnglish = isEnglishLetter(i_InputChar);
+            bool isDigit = char.IsDigit(i_InputChar);
+            if (isEnglish)
+            {
+                io_CourrentInputState |= eStrType.IsEnglish;
+            }
+            if (isDigit)
+            {
+                io_CourrentInputState |= eStrType.IsNumber;
+            }
+            if (!isEnglish && !isDigit)
+            {
+                isValidateChar = false;
+            }
+
+            return isValidateChar;
         }
         private static bool isEnglishLetter(char letter)
         {
