@@ -4,7 +4,7 @@ namespace Ex01_05
     class Program
     {
         const int k_Inputlength = 9;
-        public static void Main(string[] args)
+        public static void Main()
         {
             Ex5();
         }
