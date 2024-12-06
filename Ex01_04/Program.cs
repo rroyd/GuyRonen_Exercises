@@ -62,6 +62,7 @@ namespace Ex01_04
                     if (!char.IsDigit(userInput[i]) && !isEnglishLetter(userInput[i]))
                     {
                         Console.WriteLine("please enter valid string!");
+                        io_TypeOfString = eStrType.None;
                         break;
                     }
                 }
