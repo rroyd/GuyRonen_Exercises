@@ -3,6 +3,7 @@ namespace Ex01_05
 {
     class Program
     {
+        const int k_Inputlength = 9;
         public static void Main(string[] args)
         {
             Ex5();
@@ -24,7 +25,7 @@ namespace Ex01_05
                 Console.WriteLine("Please enter a number with 9 digits: ");
                 o_UserInput = Console.ReadLine();
 
-                if (o_UserInput.Length != 9)
+                if (o_UserInput.Length != k_Inputlength)
                 {
                     Console.WriteLine("Wrong Input.");
                     continue;
@@ -43,10 +44,10 @@ namespace Ex01_05
 
         private static int numberOfDigitsBiggerThanUnitDigit(string i_UserInput)
         {
-            char unitDigit = i_UserInput[8];
+            char unitDigit = i_UserInput[i_UserInput.Length-1];
             int numberOfBiggerDigits = 0;
 
-            for (int indexOfDigit = 0; indexOfDigit < 8; indexOfDigit++)
+            for (int indexOfDigit = 0; indexOfDigit < i_UserInput.Length; indexOfDigit++)
             {
                 char currentDigit = i_UserInput[indexOfDigit];
 
@@ -63,7 +64,7 @@ namespace Ex01_05
         {
             int numberOfDigitsDivideByFour = 0;
 
-            for (int indexOfDigit = 0; indexOfDigit < 9; indexOfDigit++)
+            for (int indexOfDigit = 0; indexOfDigit < i_UserInput.Length; indexOfDigit++)
             {
                 char currentDigit = i_UserInput[indexOfDigit];
 
@@ -79,36 +80,24 @@ namespace Ex01_05
         private static float ratioBetweenBiggestAndSmallestDigit(string i_UserInput)
         {
             float ratioBetweenBiggestAndSmallestDigit;
-            char biggestDigit, smallestDigit = '0';
-            biggestDigit = i_UserInput[0];
+            char smallestDigit = i_UserInput[0];
+            char biggestDigit = i_UserInput[0];
 
             int indexOfDigit;
-
-            for (indexOfDigit = 0; indexOfDigit < 9; indexOfDigit++)
+            for (indexOfDigit = 1; indexOfDigit < i_UserInput.Length; indexOfDigit++)
             {
                 char currentDigit = i_UserInput[indexOfDigit];
 
-                if (currentDigit != '0')
+                if (smallestDigit == '0' || (currentDigit < smallestDigit && currentDigit != '0'))
                 {
                     smallestDigit = currentDigit;
-                    break;
                 }
-            }
-
-            if(smallestDigit == '0')
-                return 0;
-
-            for (indexOfDigit = 0; indexOfDigit < 9; indexOfDigit++)
-            {
-                char currentDigit = i_UserInput[indexOfDigit];
-
-                if (smallestDigit > currentDigit && currentDigit != '0')
-                    smallestDigit = currentDigit;
-
-                if (currentDigit > biggestDigit)
+                if (biggestDigit == '0' || (currentDigit > biggestDigit && currentDigit != '0'))
+                {
                     biggestDigit = currentDigit;
-            }
+                }
 
+            }
             ratioBetweenBiggestAndSmallestDigit = (float)(biggestDigit - '0') / (smallestDigit - '0');
             return ratioBetweenBiggestAndSmallestDigit;
         }
@@ -121,7 +110,7 @@ namespace Ex01_05
 
             int numberOfSimilarPairDigits = 0;
 
-            for (indexOfDigit = 0; indexOfDigit < 9; indexOfDigit++)
+            for (indexOfDigit = 0; indexOfDigit < i_UserInput.Length; indexOfDigit++)
             { 
                 char currentDigit = i_UserInput[indexOfDigit];
 
