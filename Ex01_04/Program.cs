@@ -74,7 +74,7 @@ namespace Ex01_04
             {
                 io_CourrentInputState |= eStrType.IsNumber;
             }
-            if (!isEnglish && !isDigit)
+            if (!isEnglish && !isDigit || io_CourrentInputState == eStrType.IsEnglishAndNum)
             {
                 isValidateChar = false;
             }
@@ -86,17 +86,18 @@ namespace Ex01_04
             return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
         }
         private static bool isPolindrome(string i_Input) {
-            int i_LeftIterator = 0, i_RightIterator = 9;
-
-            while (i_LeftIterator < i_RightIterator)
+            if (i_Input.Length <= 1)
             {
-                if (i_Input[i_LeftIterator++] != i_Input[i_RightIterator--])
-                {
-                    return false;
-                }
+                return true;
             }
-
-            return true;
+            if (i_Input[0] == i_Input[i_Input.Length - 1])
+            {
+                return isPolindrome(i_Input.Substring(1, i_Input.Length - 2));
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private static bool checkIfDividesByFourIfNumber(string i_Input) {
@@ -182,7 +183,7 @@ namespace Ex01_04
             }
             if(i_Type == eStrType.IsEnglish)
             {
-                 Console.WriteLine($"2. Number of lowercase letters: {numberOfLowercaseLettersIfEnglish(i_UserInput)}");
+                Console.WriteLine(string.Format("2. Number of lowercase letters: {0}", numberOfLowercaseLettersIfEnglish(i_UserInput)));
                 if (checkIfAlphabetDescendingIfEnglish(i_UserInput))
                 {
                     Console.WriteLine($"3. Is sorted alphabetically descending: Yes");
