@@ -8,3 +8,8 @@ C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02\obj
 C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02\obj\Debug\Ex01_02.csproj.CoreCompileInputs.cache
 C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02\obj\Debug\Ex01_02.exe
 C:\Users\Roy Dadon\source\repos\C24 Ex01 Roy 213335714 Sahar 3146858\Ex01_02\obj\Debug\Ex01_02.pdb
+C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_02\bin\Debug\Ex01_02.exe.config
+C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_02\bin\Debug\Ex01_02.exe
+C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_02\bin\Debug\Ex01_02.pdb
+C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_02\obj\Debug\Ex01_02.exe
+C:\Users\97252\Source\Repos\GuyRonen_Exercises\Ex01_02\obj\Debug\Ex01_02.pdb
