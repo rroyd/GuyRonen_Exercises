@@ -34,32 +34,23 @@ namespace Ex01_04
             io_TypeOfString = eStrType.None;
             const int requiredInputLength = 10;
             bool validateInput = false;
-            string userInput="";
+            string userInput ="";
             while (!validateInput)
             {
                 io_TypeOfString = eStrType.None;
                 validateInput = true;
-                Console.WriteLine("please write valid string of 10 chars with english and numbers");
+                Console.WriteLine("Please write valid string of 10 chars with english and numbers");
                 userInput = Console.ReadLine();
-                char firstInputChar = userInput[1];
-                if (userInput.Length != 10 || (!char.IsDigit(firstInputChar) && !isEnglishLetter(firstInputChar)))
+                if (userInput.Length != requiredInputLength)
                 {
                     validateInput = false;
                     continue;
                 }
-                if (char.IsDigit(userInput[1]))
-                {
-                    io_TypeOfString = eStrType.IsNumber;
-                }
-                else
-                {
-                    io_TypeOfString = eStrType.IsEnglish;
-                }
-                validateInput = true;
+                
                 for (int i = 0; i < userInput.Length; i++)
                 {
-
-                    if (!char.IsDigit(userInput[i]) && !isEnglishLetter(userInput[i]))
+                    validateInput = validateAndDetermineInputState(userInput[i], ref io_TypeOfString);
+                    if (!validateInput)
                     {
                         Console.WriteLine("please enter valid string!");
                         io_TypeOfString = eStrType.None;
@@ -174,23 +165,33 @@ namespace Ex01_04
             {
                 Console.WriteLine("1. Is the string polindrome: Yes");
             }
-            else Console.WriteLine("1. Is the string polindrome: No");
-
+            else
+            {
+                Console.WriteLine("1. Is the string polindrome: No");
+            }
             if (i_Type == eStrType.IsNumber)
             {
                 if (checkIfDividesByFourIfNumber(i_UserInput))
-                    {
-                        Console.WriteLine("2. Is divided by 4 without remainder: Yes");
-                    } else Console.WriteLine($"2. Is divided by 4 without remainder: No");
+                {
+                    Console.WriteLine("2. Is divided by 4 without remainder: Yes");
                 }
-            else
+                else
+                {
+                    Console.WriteLine($"2. Is divided by 4 without remainder: No");
+                }
+            }
+            if(i_Type == eStrType.IsEnglish)
             {
                  Console.WriteLine($"2. Number of lowercase letters: {numberOfLowercaseLettersIfEnglish(i_UserInput)}");
-                 if(checkIfAlphabetDescendingIfEnglish(i_UserInput))
-                 {
-                     Console.WriteLine($"3. Is sorted alphabetically descending: Yes");
-                 }
-                 else Console.WriteLine($"3. Is sorted alphabetically descending: No");
+                if (checkIfAlphabetDescendingIfEnglish(i_UserInput))
+                {
+                    Console.WriteLine($"3. Is sorted alphabetically descending: Yes");
+                }
+                else
+                {
+                    Console.WriteLine($"3. Is sorted alphabetically descending: No");
+                }
+
             }
         }
     }
