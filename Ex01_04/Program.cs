@@ -52,7 +52,7 @@ namespace Ex01_04
                     validateInput = validateAndDetermineInputState(userInput[i], ref io_TypeOfString);
                     if (!validateInput)
                     {
-                        Console.WriteLine("please enter valid string!");
+                        Console.WriteLine("Please enter valid string!");
                         io_TypeOfString = eStrType.None;
                         break;
                     }
@@ -178,7 +178,7 @@ namespace Ex01_04
                 }
                 else
                 {
-                    Console.WriteLine($"2. Is divided by 4 without remainder: No");
+                    Console.WriteLine("2. Is divided by 4 without remainder: No");
                 }
             }
             if(i_Type == eStrType.IsEnglish)
@@ -186,11 +186,11 @@ namespace Ex01_04
                 Console.WriteLine(string.Format("2. Number of lowercase letters: {0}", numberOfLowercaseLettersIfEnglish(i_UserInput)));
                 if (checkIfAlphabetDescendingIfEnglish(i_UserInput))
                 {
-                    Console.WriteLine($"3. Is sorted alphabetically descending: Yes");
+                    Console.WriteLine("3. Is sorted alphabetically descending: Yes");
                 }
                 else
                 {
-                    Console.WriteLine($"3. Is sorted alphabetically descending: No");
+                    Console.WriteLine("3. Is sorted alphabetically descending: No");
                 }
 
             }

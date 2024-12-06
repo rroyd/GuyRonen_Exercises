@@ -12,7 +12,7 @@ namespace Ex01_02
         public static void Ex2()
         {
             StringBuilder treeLetters = new StringBuilder();
-            int height = 15;
+            int height = 7;
             makeLettersTree(ref treeLetters, height);
             Console.WriteLine(treeLetters.ToString());
         }

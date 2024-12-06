@@ -15,7 +15,7 @@ namespace Ex01_01
             string firstNumBinaryFormat, secondNumBinaryFormat, thirdNumBinaryFormat;
             int firstNumDecimalFormat, secondNumDecimalFormat, thirdNumDecimalFormat;
 
-            Console.WriteLine("please enter 3 binary number with 8 digits each");
+            Console.WriteLine("Please enter 3 binary number with 8 digits each: ");
 
             firstNumBinaryFormat = getBinaryNumberFromUser();
             secondNumBinaryFormat = getBinaryNumberFromUser();
@@ -53,7 +53,8 @@ namespace Ex01_01
                 maxZeroesBinaryNumStr = i_ThirdNumBinary;
              }
             maxZeroesDecimalNumber = parseBinaryToDecimalNumber(maxZeroesBinaryNumStr);
-            Console.WriteLine($"{maxZeroesDecimalNumber}: {maxZeroesCount}");
+
+            Console.WriteLine(string.Format("{0}: {1}", maxZeroesDecimalNumber, maxZeroesCount));
         }
 
         private static int countZerosInNum(string i_BinaryNum)
@@ -72,9 +73,9 @@ namespace Ex01_01
 
         private static void printNumberOfBitExchanges(string i_FirstNumBinary, string i_SecondNumBinary, string i_ThirdNumBinary)
         {
-            Console.WriteLine($"({i_FirstNumBinary}): {numberOfBitExchanges(i_FirstNumBinary)}");
-            Console.WriteLine($"({i_SecondNumBinary}): {numberOfBitExchanges(i_SecondNumBinary)}");
-            Console.WriteLine($"({i_ThirdNumBinary}): {numberOfBitExchanges(i_ThirdNumBinary)}");
+            Console.WriteLine(string.Format("({0}): {1}", i_FirstNumBinary, numberOfBitExchanges(i_FirstNumBinary)));
+            Console.WriteLine(string.Format("({0}): {1}", i_SecondNumBinary, numberOfBitExchanges(i_SecondNumBinary)));
+            Console.WriteLine(string.Format("({0}): {1}", i_ThirdNumBinary, numberOfBitExchanges(i_ThirdNumBinary)));
         }
 
         private static int numberOfBitExchanges(string i_BinaryNum)
@@ -109,7 +110,7 @@ namespace Ex01_01
                 mostSqeuenceBits = tempSqeuenceBits;
                 mostSqeuenceBitsNumStr = i_ThirdNumBinary;
             }
-            Console.WriteLine($"{mostSqeuenceBitsNumStr}:{mostSqeuenceBits}");
+            Console.WriteLine(string.Format("{0}:{1}", mostSqeuenceBitsNumStr, mostSqeuenceBits));
         }
 
         private static int findSequenceBits(string i_BinaryNum)
@@ -136,7 +137,8 @@ namespace Ex01_01
         private static void printAvg(int firstNum, int secondNum, int thirdNum)
         {
             float avgNumber = ((firstNum + secondNum + thirdNum) / 3f);
-            Console.WriteLine($"the avg number is:{avgNumber:F2}");
+
+            Console.WriteLine(string.Format("The average number is: {0:F2}", avgNumber));
         }
 
         private static void printAscendingNumbers(int firstNum, int secondNum, int thirdNum)
@@ -144,7 +146,9 @@ namespace Ex01_01
             int min = Math.Min(firstNum, Math.Min(secondNum, thirdNum));
             int max = Math.Max(firstNum, Math.Max(secondNum, thirdNum));
             int mid = (firstNum + secondNum + thirdNum - min - max);
-            Console.WriteLine($"sorted numbers: {min}, {mid}, {max}");
+
+
+            Console.WriteLine(string.Format("Sorted numbers: {0}, {1}, {2}",  min, mid, max));
         }
 
 

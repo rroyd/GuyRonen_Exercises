@@ -132,10 +132,10 @@ namespace Ex01_05
 
         private static void printResults(string i_UserInput)
         {
-            Console.WriteLine($"a. Number of digits bigger than the unit digit : {numberOfDigitsBiggerThanUnitDigit(i_UserInput)}");
-            Console.WriteLine($"b. Number of digits divide by 4: {numberOfDigitsDivideByFour(i_UserInput)}");
-            Console.WriteLine($"c. Ratio between the biggest digit and the smallest digit: {Math.Floor(ratioBetweenBiggestAndSmallestDigit(i_UserInput) * 100) / 100}");
-            Console.WriteLine($"d. Number of similar digit pairs: {numberOfSimilarPairDigits(i_UserInput)}");
+            Console.WriteLine(string.Format("a. Number of digits bigger than the unit digit: {0}", numberOfDigitsBiggerThanUnitDigit(i_UserInput)));
+            Console.WriteLine(string.Format("b. Number of digits divide by 4:  {0}", numberOfDigitsDivideByFour(i_UserInput)));
+            Console.WriteLine(string.Format("c. Ratio between the biggest digit and the smallest digit: {0:F2}", ratioBetweenBiggestAndSmallestDigit(i_UserInput)));
+            Console.WriteLine(string.Format("d. Number of similar digit pairs: {0}", numberOfSimilarPairDigits(i_UserInput)));
         }
 
     }
