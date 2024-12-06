@@ -54,6 +54,7 @@ namespace Ex01_04
                     if (!validateInput)
                     {
                         Console.WriteLine("please enter valid string!");
+                        io_TypeOfString = eStrType.None;
                         break;
                     }
                 }
