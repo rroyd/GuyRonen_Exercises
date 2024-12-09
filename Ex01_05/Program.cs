@@ -3,7 +3,7 @@ namespace Ex01_05
 {
     class Program
     {
-        const int k_Inputlength = 9;
+        const int k_InputLength = 9;
         public static void Main(string[] args)
         {
             Ex5();
@@ -25,7 +25,7 @@ namespace Ex01_05
                 Console.WriteLine("Please enter a number with 9 digits: ");
                 o_UserInput = Console.ReadLine();
 
-                if (o_UserInput.Length != k_Inputlength)
+                if (o_UserInput.Length != k_InputLength)
                 {
                     Console.WriteLine("Wrong Input.");
                     continue;
