@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCBE9A9C-E631-449F-B9BA-7E3EA9E4D99C}|Ex01_02\\Ex01_02.csproj|C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\ex01_02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCBE9A9C-E631-449F-B9BA-7E3EA9E4D99C}|Ex01_02\\Ex01_02.csproj|c:\\users\\97252\\source\\repos\\guyronen_exercises\\ex01_02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCBE9A9C-E631-449F-B9BA-7E3EA9E4D99C}|Ex01_02\\Ex01_02.csproj|solutionrelative:ex01_02\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0517070-C9D1-490E-A206-06B5F7C362B3}|Ex01_04\\Ex01_04.csproj|c:\\users\\97252\\source\\repos\\guyronen_exercises\\ex01_04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0517070-C9D1-490E-A206-06B5F7C362B3}|Ex01_04\\Ex01_04.csproj|solutionrelative:ex01_04\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4D1C6B0-1C95-4DD8-8F92-3B355BE02F5F}|Ex01_05\\Ex01_05.csproj|c:\\users\\97252\\source\\repos\\guyronen_exercises\\ex01_05\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4D1C6B0-1C95-4DD8-8F92-3B355BE02F5F}|Ex01_05\\Ex01_05.csproj|solutionrelative:ex01_05\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A7832F7-5973-4FCE-A6BD-D34F5A004F1F}|Ex01_03\\Ex01_03.csproj|C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\ex01_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A7832F7-5973-4FCE-A6BD-D34F5A004F1F}|Ex01_03\\Ex01_03.csproj|solutionrelative:ex01_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9200E3AD-B1E8-41B2-BC6C-8ADD1C60471C}|Ex01_01\\Ex01_01.csproj|C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\ex01_01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9200E3AD-B1E8-41B2-BC6C-8ADD1C60471C}|Ex01_01\\Ex01_01.csproj|solutionrelative:ex01_01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 192,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_05\\Program.cs",
-              "RelativeDocumentMoniker": "Ex01_05\\Program.cs",
-              "ToolTip": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_05\\Program.cs",
-              "RelativeToolTip": "Ex01_05\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:30:08.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_04\\Program.cs",
-              "RelativeDocumentMoniker": "Ex01_04\\Program.cs",
-              "ToolTip": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_04\\Program.cs",
-              "RelativeToolTip": "Ex01_04\\Program.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAAEwAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:07:02.321Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
             },
             {
               "$type": "Document",
@@ -64,25 +38,36 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_02\\Program.cs",
               "RelativeDocumentMoniker": "Ex01_02\\Program.cs",
-              "ToolTip": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_02\\Program.cs*",
-              "RelativeToolTip": "Ex01_02\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_02\\Program.cs",
+              "RelativeToolTip": "Ex01_02\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:24:37.019Z",
+              "WhenOpened": "2024-12-06T16:30:37.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_03\\Program.cs",
               "RelativeDocumentMoniker": "Ex01_03\\Program.cs",
               "ToolTip": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_03\\Program.cs",
               "RelativeToolTip": "Ex01_03\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:24:32.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T16:31:27.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_01\\Program.cs",
+              "RelativeDocumentMoniker": "Ex01_01\\Program.cs",
+              "ToolTip": "C:\\Users\\97252\\source\\repos\\GuyRonen_Exercises\\Ex01_01\\Program.cs",
+              "RelativeToolTip": "Ex01_01\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T16:30:57.541Z"
             }
           ]
         }

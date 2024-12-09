@@ -100,14 +100,14 @@ namespace Ex01_04
             }
         }
 
-        private static bool checkIfDividesByFourIfNumber(string i_Input) {
+        private static bool checkIfDividesByFour(string i_Input) {
             int inputNum;
             bool isNumber = int.TryParse(i_Input, out inputNum);
 
             return inputNum % 4 == 0;
         }
 
-        private static int numberOfLowercaseLettersIfEnglish(string i_Input)
+        private static int numberOfLowercaseLetters(string i_Input)
         {
             int numOfLowerCaseLetters = 0;
 
@@ -121,7 +121,7 @@ namespace Ex01_04
             return numOfLowerCaseLetters;
         }
 
-        private static bool checkIfAlphabetDescendingIfEnglish(string i_Input) {
+        private static bool checkIfAlphabetDescending(string i_Input) {
             bool isAlphabetDescending = true;  
 
             for (int i = 1; i < 10; i++)
@@ -172,7 +172,7 @@ namespace Ex01_04
             }
             if (i_Type == eStrType.IsNumber)
             {
-                if (checkIfDividesByFourIfNumber(i_UserInput))
+                if (checkIfDividesByFour(i_UserInput))
                 {
                     Console.WriteLine("2. Is divided by 4 without remainder: Yes");
                 }
@@ -183,8 +183,8 @@ namespace Ex01_04
             }
             if(i_Type == eStrType.IsEnglish)
             {
-                Console.WriteLine(string.Format("2. Number of lowercase letters: {0}", numberOfLowercaseLettersIfEnglish(i_UserInput)));
-                if (checkIfAlphabetDescendingIfEnglish(i_UserInput))
+                Console.WriteLine(string.Format("2. Number of lowercase letters: {0}", numberOfLowercaseLetters(i_UserInput)));
+                if (checkIfAlphabetDescending(i_UserInput))
                 {
                     Console.WriteLine("3. Is sorted alphabetically descending: Yes");
                 }
